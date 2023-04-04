@@ -1,15 +1,24 @@
 {
     "name": "itsk-component",
-    "version": "1.0.1",
-    "description": "this is tailwind components",
-    "private": true,
+    "version": "1.0.5",
+    "main": "dist/itsk-component.common.js",
+    "module": "dist/itsk-component.umd.min.js",
+    "author": "kanchan-salame",
+    "description": " ## Project Setup ``` npm instal ``` ",
+    "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "private": false,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+        "build": "npm run build:lib && npm run build:style",
+        "build:lib": "vue-cli-service build --target lib --name itsk-component src/index.js",
+        "build:style": "postcss src/tailwind.css -o dist/style.css"
     },
     "dependencies": {
         "core-js": "^3.8.3",
+        "postcss-cli": "^10.1.0",
         "vue": "^3.2.13"
     },
     "devDependencies": {
@@ -18,8 +27,11 @@
         "@vue/cli-plugin-babel": "~5.0.0",
         "@vue/cli-plugin-eslint": "~5.0.0",
         "@vue/cli-service": "~5.0.0",
+        "autoprefixer": "^10.4.14",
         "eslint": "^7.32.0",
-        "eslint-plugin-vue": "^8.0.3"
+        "eslint-plugin-vue": "^8.0.3",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.3.1"
     },
     "eslintConfig": {
         "root": true,
@@ -39,8 +51,6 @@
         "type": "git",
         "url": "git+https://github.com/kanchan-salame/itsk-component.git"
     },
-    "author": "kanchan-salame",
-    "license": "ISC",
     "bugs": {
         "url": "https://github.com/kanchan-salame/itsk-component/issues"
     },
