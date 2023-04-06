@@ -1,6 +1,6 @@
 {
     "name": "itsk-component",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "dist/itsk-component.common.js",
     "module": "dist/itsk-component.umd.min.js",
     "author": "kanchan-salame",
